@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Prabhav Khandelwal{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- Favicons -->
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+
+        {{ "font-stylesheet.css" | asset_url | stylesheet_tag }}
+        {{ "genericons.css" | asset_url | stylesheet_tag }}
+        {{ "style.css" | asset_url | stylesheet_tag }}
+        
+        {% block styles %}{% endblock %}
+
+        {% include "analytics" %}
+
+    </head>
+    <body>
+        
+        <section class="intro">
+        <div class="inner">
+
+            <div class="centered">
+                <h1>Hey, I'm Prabhav Khandelwal.</h1>
+                <h1>I make websites and stuff.</h1>
+                <div class="button-cont">
+                    <a href="https://twitter.com/helloprabhav" class="button"><span class="genericon genericon-twitter"></span>Tweet Me &rarr;</a>
+                </div>
+                {% comment %}<div class="button-cont">{% endcomment %}
+                    <a href="mailto:me@prabhavkhandelwal.com" class="button"><span class="genericon genericon-mail"></span>Email Me &rarr;</a>
+                {% comment %}</div>{% endcomment %}
+            </div>
+
+        </div>
+        </section>
+
+
+        {% block content %}{% endblock %}
+    
+        {% block scripts %}{% endblock %}
+        
+    </script>
+    </body>
+</html>
